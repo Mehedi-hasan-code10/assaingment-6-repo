@@ -110,7 +110,7 @@ function addToCart(name, price) {
     cartItem.innerHTML = `
       <div>
         <h1 class="font-bold">${name}</h1>
-        <p>৳<span class="cart-item-price">${price}</span></p>
+        <p>৳<span class="cart-item-price">${price}x1</span></p>
       </div>
       <button class="remove-btn">❌</button>`;
 
