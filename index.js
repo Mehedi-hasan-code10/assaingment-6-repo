@@ -82,10 +82,10 @@ const displayLoadTreeCard = (trees) => {
       <h1 onclick="loadNameDetails(${tree.id})" class="font-bold text-xl cursor-pointer tree-name">${tree.name}</h1>
       <p class="text-sm mb-2">${tree.description}</p>
       <div class="flex justify-between mb-2">
-        <span class="bg-green-100 px-2 py-1 rounded text-green-800">${tree.category}</span>
+        <span class="bg-green-100 px-3 py-1 rounded-2xl text-green-800">${tree.category}</span>
         <span class="font-bold">৳<span class="tree-price">${tree.price}</span></span>
       </div>
-      <button class="w-full bg-green-800 text-white py-2 rounded add-cart hover:bg-green-700">Add to Cart</button>
+      <button class="w-full bg-green-800 text-white py-2 rounded-3xl add-cart hover:bg-green-700">Add to Cart</button>
     `;
         container.appendChild(div);
     });
@@ -125,3 +125,16 @@ document.getElementById("add-to-cart-main-section").addEventListener("click", (e
         updateCartTotal();
     }
 });
+
+// Update total tk
+function updateCartTotal() {
+    let total = 0;
+    document.querySelectorAll(".cart-item").forEach(item => {
+        total += parseFloat(item.querySelector(".cart-item-price").innerText);
+    });
+    document.getElementById("cart-total-price").innerText = total.toFixed(2);
+}
+
+
+toggleMenu();
+allCategory();
