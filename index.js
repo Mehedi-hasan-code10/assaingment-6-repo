@@ -105,6 +105,7 @@ function addToCart(name, price) {
     const cart = document.getElementById("add-to-cart-main-section");
 
     const cartItem = document.createElement("div");
+    alert(`"${name}" has been added to your cart`);
     cartItem.className = "cart-item flex justify-between items-center rounded-lg p-2 bg-green-50 mt-2";
     cartItem.innerHTML = `
       <div>
