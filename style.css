@@ -44,3 +44,9 @@
      font-variation-settings:
          "wdth" 100;
  }
+
+ .tree-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+ }

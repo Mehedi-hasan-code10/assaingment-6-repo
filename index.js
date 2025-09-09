@@ -10,9 +10,9 @@ const displayModal = (plant) => {
     const container = document.getElementById("detailes-container");
     container.innerHTML = `
   <h3 class="text-lg font-bold">${plant.name}</h3>
-  <img class="rounded-lg w-full h-[220px]" src="${plant.image}" />
-  <p><span class="font-bold">Category:</span> ${plant.category}</p>
-  <p><span class="font-bold">Price:</span> ৳${plant.price}</p>
+  <img class="rounded-lg w-full h-[300px]" src="${plant.image}" />
+  <p class="font-bold"><span class="font-bold">Category:</span> ${plant.category}</p>
+  <p class="font-bold"><span class="font-bold">Price:</span> ৳${plant.price}</p>
   <p><span class="font-bold">Description:</span> ${plant.description}</p>
   <div class="modal-action"><form method="dialog"><button class="btn">Close</button></form></div>`;
     document.getElementById("my_modal_5").showModal();
@@ -28,7 +28,7 @@ const displayMenu = (categories) => {
     const container = document.getElementById("asaid-cointainer");
     container.innerHTML = "";
 
-    // ✅ All Trees default
+    //  All Trees
     const allLi = document.createElement("li");
     allLi.textContent = "All Trees";
     allLi.classList.add("active");
